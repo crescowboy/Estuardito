@@ -1,0 +1,163 @@
+.topheader{
+    position: fixed;
+    background-color: var(--theme-color);
+    box-shadow: 0 4px 5px ;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 70;
+}
+
+.topnavbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+.menu li{
+    padding: 0 15px;
+}
+
+.menu a{
+    color: white;
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+
+}
+
+.menu a:hover{
+    color: var(--secundary-color);
+}
+
+.menu a::after{
+    content: "";
+    background-color: var(--secundary-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 4px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.menu a.selected::after,
+.menu a:hover::after{
+    opacity: 0.8;
+}
+
+.logo a{
+    color: white;
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.logo a:hover{
+    color: var(--secundary-color);
+}
+
+.open-menu,
+.close-menu{
+    display: none;
+}
+
+
+@media(max-width: 950px){
+    
+    
+    
+    
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background-color: var(--menu-mobile-background-color);
+        height: 100%;
+        overflow-y: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        
+    
+    }
+    
+    .menu li{
+        padding: 0;
+    }
+    
+    .menu a{
+        line-height: 70px;
+        color: white;
+        font-size: 22px;
+    
+    }
+    
+    
+    
+    .menu a::after{
+        content: none;
+    }
+    
+    .menu a.selected::after,
+    .menu a:hover::after{
+        opacity: 0.8;
+    }
+
+    .menu a:hover,
+    .menu a.selected{
+        color: var(--secundary-color);
+    }
+    
+    .logo a{
+        color: black;
+        font-size: 18px;
+        line-height: 50px;
+    }
+    
+   
+    
+    .open-menu,
+    .close-menu{
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .open-menu img{
+        width: 50px;
+    }
+
+    .close-menu img{
+        width: 50px;
+        height: 45px;
+    }
+
+    .close-menu{
+        align-self: flex-end;
+        padding: 13px 16px;
+    }
+
+    .menu_opened{
+        opacity: 1;
+        pointer-events: all;
+    }
+}

@@ -1,0 +1,80 @@
+.cumple{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 20px;
+}
+
+.text{
+    color: #1CF1F6;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.cumple-img{
+    
+    text-align: center;
+}
+
+.cumple-img img{
+    width: 75px;
+    text-align: center;
+    margin-bottom: 2px;
+    
+} 
+
+.cumple-img-1{
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cumple-img-1 img{
+    width: 60px;
+    margin: 5px;
+    text-align: center;
+    
+}
+
+
+@media(min-width:950px){
+    .cumple{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .text{
+        
+        font-size: 70px;
+        width: 80%;
+        text-align: center;
+    }
+    
+    .cumple-img{
+        
+        text-align: center;
+        
+    }
+
+    .cumple-img img{
+        width: 200px;
+    }
+    
+    .cumple-img-1{
+        padding: 8px;
+       
+        
+    }
+    
+    .cumple-img-1 img{
+        width: 200px;
+        margin: 5px;
+        text-align: center;
+        
+    }
+}
+
